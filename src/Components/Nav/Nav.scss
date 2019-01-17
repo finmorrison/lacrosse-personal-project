@@ -1,0 +1,67 @@
+.Nav {
+    box-sizing: border-box;
+    padding: 15px;
+    padding-bottom:0;
+    margin: 15px;
+    background-color: #1E1F27;
+    color: gray;
+    height: 6vh;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
+.bar{
+    font-size: 2.5vh;
+    text-decoration: none;
+    
+    .logo{
+        display: inline-block;
+        a{
+            text-emphasis: none;
+            text-decoration: none;
+            color: #b5cd60;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+    }
+    .logo:hover{
+        text-emphasis: none;
+    }
+    .navbar{
+        font-size: 75%;
+        float: right;
+        a{
+            text-emphasis: none;
+            text-decoration: none;
+            color: #b5cd60;
+            transition: 0.3s ease-in
+        }
+        a:hover{
+            font-size: 105%;
+            color: lightgrey;
+        }
+    } 
+    .hamburger{
+        display: none;
+        box-sizing: border-box;
+           padding: 15px;
+           padding-bottom:0;
+           margin: 15px;
+           background-color: #1E1F27;
+           width: 95vw;
+           height: 6vh;
+           
+    }
+}
+
+
+
+@media(max-width: 660px){
+   .Nav{
+       display: none
+   } 
+   .hamburger{
+       display: inline-block;
+       
+   }
+}
+
