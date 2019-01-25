@@ -6,7 +6,8 @@ import Mens from "./Components/Mens/Mens";
 import Main from "./Components/Main/Main";
 import Womens from "./Components/Womens/Womens";
 import Cart from "./Components/Cart/Cart";
-
+import User from "./Components/User/User"
+// import Checkoutform from "./Components/Cart/injectStripe/Checkoutform";
 export default (
   <Switch>
     <Route component={Auth} exact path="/Auth" />
@@ -15,5 +16,6 @@ export default (
     <Route component={Main} exact path="/" />
     <Route component={Womens} exact path="/Womens" />
     <Route component={Cart} exact path="/Cart" />
+    <Route component={User} exact path="/User" />
   </Switch>
 );

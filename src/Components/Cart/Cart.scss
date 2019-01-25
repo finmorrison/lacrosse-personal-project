@@ -1,0 +1,26 @@
+.cartMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartItems {
+  display: flex;
+  align-items: baseline;
+  background: #1e1f27;
+  margin: 10px;
+  padding: 8px;
+  width: 300px;
+  #singleItem {
+    width: 284px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    img {
+      margin: 8px;
+    }
+    #itemInfo{
+        padding: 15px;
+    }
+  }
+}

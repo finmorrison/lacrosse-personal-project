@@ -9,5 +9,6 @@ meshColor text,
 sidewallColor text,
 shootingStringColor text,
 specialtyStyle text,
-headtype text
+headtype text,
+whip varchar(25)
 )

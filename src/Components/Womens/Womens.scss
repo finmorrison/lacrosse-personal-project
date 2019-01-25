@@ -1,0 +1,135 @@
+#title {
+  display: flex;
+}
+
+.allCards {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  //   align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  height: 590px;
+  width: 300px;
+  display: flex;
+  margin: 15px;
+  background: #1e1f27;
+  border-radius: 10px;
+  img {
+    width: 100%;
+    height: 85%;
+    opacity: 0.9;
+    z-index: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+  }
+}
+
+.product-card-text {
+  width: 100%;
+  color: rgb(94, 94, 95);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  #head {
+    width: 100%;
+    height: 15%;
+    font-size: 230%;
+    display: flex;
+    align-items: flex-end;
+    // flex-direction: column;
+    // justify-content: flex-end;
+    transition: font-size 0.1s;
+    // transition: color 0.1s;
+    tran
+      // transition: .1s ;
+  
+      #head-title {
+      width: 50%;
+      transition: 0.5s;
+    }
+    #price {
+      // position: relative;
+      // transform: position  .1s;
+      color: rgb(94, 94, 95);
+      float: right;
+      transition: 0.5s;
+      width: 50%;
+      margin-left: 85px;
+    }
+
+    .stats-container {
+      font-size: 0vh;
+      transition-property: font-size;
+      transition-duration: 0.5s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 5px;
+
+      #seperators {
+        border-bottom: 1px solid rgb(94, 94, 95);
+      }
+    }
+  }
+  #head:hover {
+    height: 225px;
+    display: flex;
+    align-items: flex-end;
+    // flex-direction: column;
+    // justify-content: flex-end;
+    z-index: 100;
+    background: #1e1f27;
+    color: rgb(94, 94, 95);
+    border-radius: 20px;
+
+    #head-title {
+      display: inline-block;
+      width: 33%;
+    }
+    #price {
+      display: inline-block;
+      margin-left: 15px;
+      width: 33%;
+    }
+
+    .stats-container {
+      font-size: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: #1e1f27;
+      //   margin-left: 2%;
+      padding: 5px;
+      width: 38%;
+    }
+  }
+}
+
+@media (max-width: 1035px) {
+  .allCards {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 660px) {
+  .product-card {
+    height: 550px;
+    width: 400px;
+    #head {
+      font-size: 260%;
+    }
+  }
+}
