@@ -4,7 +4,7 @@ import Axios from "axios";
 import { updateUser } from "./../../ducks/reducer";
 import { connect } from "react-redux";
 // import { userInfo } from "os";
-const serverLogout = process.env.REACT_APP_SERVER_LOGOUT;
+const serverLogout = process.env.REACT_APP_2SERVER_LOGOUT;
 
 export class User extends Component {
   constructor() {

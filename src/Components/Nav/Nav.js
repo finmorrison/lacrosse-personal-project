@@ -5,6 +5,8 @@ import { updateUser } from "./../../ducks/reducer";
 import { connect } from "react-redux";
 // import swal from "sweetalert2";
 import Axios from "axios";
+// import {Navbar, NavItem, MenuItem, NavDropdown} from 'react-bootstrap'
+// import 'r'
 
 class Nav extends Component {
   async componentDidMount() {
@@ -38,26 +40,14 @@ class Nav extends Component {
         {/* <div id="username">{user.username}{user.id}</div> */}
         <div className="bar">
           <div className="navbar">
-            <Link to="/">Home </Link>
+            <Link to="/"> Home </Link>
             <Link to="/Auth"> Login </Link>
             <Link to="/StringMain"> String Menu </Link>
             <Link to="/Mens"> Mens </Link>
             <Link to="/Womens"> Womens </Link>
             <Link to="/Cart"> Cart </Link>
-            <Link to="/User">User</Link>
-
+            <Link to="/User"> User</Link>
           </div>
-          {/* <div className="hamburger">
-            <p>-</p>
-            <p>-</p>
-            <p>-</p>
-            <Link to="/">Home </Link>
-            <Link to="/Auth">| Login </Link>
-            <Link to="/StringMain">| String Menu </Link>
-            <Link to="/Mens">| Mens </Link>
-            <Link to="/Womens">| Womens </Link>
-            <Link to="Cart">| Cart </Link>
-          </div> */}
         </div>
       </div>
     );

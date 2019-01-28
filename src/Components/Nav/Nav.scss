@@ -9,6 +9,7 @@
   background-color: #1e1f27;
   color: #b5cd60;
   height: 6vh;
+  margin-bottom: 25px;
 }
 
 .logo {
@@ -68,60 +69,64 @@
   }
 }
 
-// body {
-//     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
-// .bar{
-//     font-size: 2.5vh;
-//     text-decoration: none;
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
+.bar{
+    font-size: 2.5vh;
+    text-decoration: none;
 
-//     .logo{
-//         display: inline-block;
-//         a{
-//             text-emphasis: none;
-//             text-decoration: none;
-//             color: #b5cd60;
-//             font-family: Verdana, Geneva, Tahoma, sans-serif
-//         }
-//     }
-//     .logo:hover{
-//         text-emphasis: none;
-//     }
-//     .navbar{
-//         font-size: 75%;
-//         float: right;
-//         a{
-//             text-emphasis: none;
-//             text-decoration: none;
-//             color: #b5cd60;
-//             transition: 0.3s ease-in
-//         }
-//         a:hover{
-//             font-size: 105%;
-//             color: lightgrey;
-//         }
-//         button{
-//             float: right;
-//         }
-//     }
-//     .hamburger{
-//         display: none;
-//         box-sizing: border-box;
-//            padding: 15px;
-//            padding-bottom:0;
-//            margin: 15px;
-//            background-color: #1E1F27;
-//            width: 95vw;
-//            height: 6vh;
+    
+    .navbar{
+        font-size: 75%;
+        float: right;
+        a{
+            text-emphasis: none;
+            text-decoration: none;
+            color: #b5cd60;
+            transition: 0.3s ease-in
+        }
+        a:hover{
+            font-size: 105%;
+            color: lightgrey;
+        }
+        button{
+            float: right;
+        }
+    }
+    
+}
+@media(max-width: 700px){
+  .Nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 21vh;
+    .logo{
+      display: flex;
+      align-items: baseline;
+    }
+  }
+  .bar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
 
-//     }
-// }
-
-// @media(max-width: 660px){
-//    .Nav{
-//        display: none
-//    }
-//    .hamburger{
-//        display: inline-block;
-
-//    }
-// }
+    .navbar{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      margin: 3px;
+      font-size: 25%;
+      a{
+        margin: 0px;
+        font-size: 250%;
+      
+      }
+      a:before{
+        content: "-"
+      }
+    }
+  }
+}

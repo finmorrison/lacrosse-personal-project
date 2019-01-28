@@ -1,0 +1,52 @@
+$display: flex;
+$justify-content: center;
+$align-items: center;
+
+h3{
+    color: white;
+    background: #171d27;
+    border-radius: 10px;
+}
+
+
+.carousel-slide{
+    width: 100vw;
+    margin: 15px;
+    
+    
+}
+.carousel-inner{
+    padding-left: 65px;
+    height: 100%;
+    width: 100%;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 25vh;
+    width: 100%;
+}
+#belowTheCar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .tiles{
+        width: 325px;
+        height: 175px;
+        background: #171D27;
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 185px;
+    }
+}
+
+
+
+

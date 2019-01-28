@@ -33,6 +33,57 @@ module.exports = {
     });
   },
 
+  addStringJob: async (req, res) => {
+    const db = req.app.get("db");
+    const {
+      pocketPlacement,
+      meshType,
+      meshColor,
+      sidewallColor,
+      shootingStrings,
+      specialtyStyle,
+      whip
+    } = req.body;
+    await db.add_string_selection({
+      pocketPlacement: pocketPlacement,
+      meshType: meshType,
+      meshColor: meshColor,
+      sidewallColor: sidewallColor,
+      shootingStrings: shootingStrings,
+      specialtyStyle: specialtyStyle,
+      whip: whip
+    });
+    res.status(200).send(req.body);
+  },
+
+  putStringJobCart: async (req, res) => {
+    const db = req.app.get("db");
+    const {
+      pocketPlacement,
+      meshType,
+      meshColor,
+      sidewallColor,
+      shootingStrings,
+      specialtyStyle,
+      whip
+    } = req.body;
+    await db.find_string_job({
+      pocketPlacement: pocketPlacement,
+      meshType: meshType,
+      meshColor: meshColor,
+      sidewallColor: sidewallColor,
+      shootingStrings: shootingStrings,
+      specialtyStyle: specialtyStyle,
+      whip: whip
+    });
+    const userArr = req.session.user.id;
+    await db.create_cart_item({ itemid: itemid, userid: userArr });
+    req.session.cart = {
+      itemid: itemArr[0].itemid,
+      userid: userArr
+    };
+  },
+
   getCart: async (req, res) => {
     const db = req.app.get("db");
     // const { itemid, userid } = req.body;
@@ -68,10 +119,9 @@ module.exports = {
     }
   },
 
-  payForAllItems: async (req, res)=>{
+  payForAllItems: async (req, res) => {
     const db = req.app.get("db");
     const userInfo = req.session.user.id;
-    await db.purchase({userid: userInfo})
-  },
-
+    await db.purchase({ userid: userInfo });
+  }
 };

@@ -60,7 +60,7 @@ export class Cart extends Component {
         <div className='cartMain' key={i}>
           <div className='cartItems'>
             <div id = 'singleItem'>
-              <img src={e.images} alt="" style={imageStyle} />
+              <img src={e.images} alt="" />
               <div id='itemInfo'>
                 <div>{e.headtype}</div>
                 <span> Price: ${e.itemprice}.00</span>
@@ -86,9 +86,7 @@ export class Cart extends Component {
   }
 }
 
-const imageStyle = {
-  height: 100
-};
+
 
 const mapStateToProps = reduxStore => reduxStore;
 

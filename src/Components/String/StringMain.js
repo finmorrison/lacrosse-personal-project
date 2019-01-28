@@ -5,6 +5,7 @@ import AssortStrings from "./AssortStrings";
 import Specialty from "./Specialty";
 import "./StringMain.scss";
 import Nav from "../Nav/Nav";
+import Axios from "axios";
 // import cloudinary from 'cloudinary-react'
 
 export class StringMain extends Component {
@@ -30,18 +31,20 @@ export class StringMain extends Component {
     });
   };
 
-  // handleSubmit = () => {
-    
-  //   );
-  // };
-
-  // cloudinary.createUploadWidget=({
-  //   cloudName: 'dti5uijrd',
-  //   uploadPreset: 'my_preset'}, (error, result) => { console.log(error, result) })
-
-  // document.getElementById("upload_widget").addEventListener("click", function(){
-  //     myWidget.open();
-  //   }, false);
+   handleSubmit=()=>{
+    const {pocketPlacement, meshType, meshColor, sidewallColor, shootingStrings, specialtyStyle, whip} = this.state
+     Axios.post('/api/addStringJob', {
+      pocketPlacement: pocketPlacement,
+      meshType: meshType,
+      meshColor: meshColor,
+      sidewallColor: sidewallColor,
+      shootingStrings: shootingStrings,
+      specialtyStyle: specialtyStyle,
+      whip: whip
+    }).then(res=>
+      console.log(res.data))
+      alert('successfully submitted, now add to cart!')
+  }
 
   render() {
     console.log(this.state);
@@ -59,9 +62,13 @@ export class StringMain extends Component {
           <Mesh handleChange={this.handleChange} />
           <AssortStrings handleChange={this.handleChange} />
           <Specialty handleChange={this.handleChange} />
-          <button style={style} onClick={this.handleSubmit}>
-            Submit
-          </button>
+        please submit options before adding to cart.
+          <div className='buttons'>
+            <button style={style} onClick={()=>this.handleSubmit()}>
+              Submit
+            </button>
+            <button>Add To Cart</button>
+          </div>
         </div>
       </div>
     );
