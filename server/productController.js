@@ -77,6 +77,7 @@ module.exports = {
       whip: whip
     });
     const userArr = req.session.user.id;
+    const {itemid} = req.query
     await db.create_cart_item({ itemid: itemid, userid: userArr });
     req.session.cart = {
       itemid: itemArr[0].itemid,

@@ -1,3 +1,4 @@
+$color: #b5cd60;
 .Nav {
   display: flex;
   // justify-content: baseline;
@@ -21,7 +22,7 @@
   a {
     font-size: 4vh;
     text-decoration: none;
-    color: #b5cd60;
+    color: $color;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-emphasis: none;
     text-decoration: none;
@@ -44,14 +45,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: #b5cd60;
+  color: $color;
   .navbar {
     justify-content: flex-end;
     align-items: center;
     display: flex;
     a{
         margin: 5px;
-        color: #b5cd60;
+        color: $color;
         font-size: 2vh;
         transition: .3s;
     }
@@ -82,7 +83,7 @@ body {
         a{
             text-emphasis: none;
             text-decoration: none;
-            color: #b5cd60;
+            color: $color;
             transition: 0.3s ease-in
         }
         a:hover{

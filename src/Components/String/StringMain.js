@@ -21,7 +21,8 @@ export class StringMain extends Component {
       whip: "",
       specialtyStyle: "",
       Images: [],
-      Comments: ""
+      Comments: "",
+      itemid: 0
     };
   }
 
@@ -30,6 +31,10 @@ export class StringMain extends Component {
       [prop]: val
     });
   };
+
+  getID = ()=>{
+    
+  }
 
    handleSubmit=()=>{
     const {pocketPlacement, meshType, meshColor, sidewallColor, shootingStrings, specialtyStyle, whip} = this.state

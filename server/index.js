@@ -33,20 +33,20 @@ massive(CONNECTION_STRING).then(db => {
   });
 });
 
-app.use(async (req, res, next) => {
-  if (NODE_ENV === "development") {
-    const db = req.app.get("db");
-    const userData = await db.set_data();
-    console.log(userData);
-    req.session.user = {
-      id: userData[0].userid,
-      username: userData[0].username
-    };
-    next();
-  } else {
-    next();
-  }
-});
+// app.use(async (req, res, next) => {
+//   if (NODE_ENV === "development") {
+//     const db = req.app.get("db");
+//     const userData = await db.set_data();
+//     console.log(userData);
+//     req.session.user = {
+//       id: userData[0].userid,
+//       username: userData[0].username
+//     };
+//     next();
+//   } else {
+//     next();
+//   }
+// });
 
 app.post("/auth/register", authCtrl.register);
 app.post("/auth/login", authCtrl.login);
